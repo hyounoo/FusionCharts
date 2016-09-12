@@ -27,5 +27,25 @@ namespace FusionChart.Controllers
         {
             return View();
         }
+
+        public ActionResult StockTicker()
+        {
+            return View();
+        }
+
+        public ActionResult PieAndDoughnut()
+        {
+            return View();
+        }
+
+        public ActionResult MultiSeries()
+        {
+            return View();
+        }
+
+        public ActionResult Pareto()
+        {
+            return View();
+        }
     }
 }

@@ -964,6 +964,10 @@
     <Content Include="Scripts\version.json" />
     <Content Include="Views\Home\Map.cshtml" />
     <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\Home\StockTicker.cshtml" />
+    <Content Include="Views\Home\PieAndDoughnut.cshtml" />
+    <Content Include="Views\Home\MultiSeries.cshtml" />
+    <Content Include="Views\Home\Pareto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
