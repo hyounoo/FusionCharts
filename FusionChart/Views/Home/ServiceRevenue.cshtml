@@ -1,0 +1,148 @@
+﻿
+@{
+    ViewBag.Title = "Specialty Client Service Revenue";
+}
+
+<h2>Specialty Client Service Revenue</h2>
+
+
+<div id="chart-container">An angular gauge will load here!</div>
+
+<script type="text/javascript" src="~/Scripts/fusioncharts/fusioncharts.js"></script>
+<script type="text/javascript">
+    FusionCharts.ready(function () {
+        var csatGauge = new FusionCharts({
+            "type": "mscolumn2d",
+            "renderAt": "chart-container",
+            "width": "800",
+            "height": "400",
+            "dataFormat": "json",
+            "dataSource": {
+                "chart": {
+                    "caption": "Year-to-Date",
+                    "xAxisname": "Political Risk",
+                    "yAxisName": "Revenues (In USD)",
+                    "numberPrefix": "$",
+                    "plotFillAlpha": "80",
+
+                    //Cosmetics
+                    "paletteColors": "#0075c2,#1aaf5d,#4a90e2",
+                    "baseFontColor": "#333333",
+                    "baseFont": "Helvetica Neue,Arial",
+                    "captionFontSize": "14",
+                    "subcaptionFontSize": "14",
+                    "subcaptionFontBold": "0",
+                    "showBorder": "0",
+                    "bgColor": "#ffffff",
+                    "showShadow": "0",
+                    "canvasBgColor": "#ffffff",
+                    "canvasBorderAlpha": "0",
+                    "divlineAlpha": "100",
+                    "divlineColor": "#999999",
+                    "divlineThickness": "1",
+                    "divLineIsDashed": "1",
+                    "divLineDashLen": "1",
+                    "divLineGapLen": "1",
+                    "usePlotGradientColor": "0",
+                    "showplotborder": "0",
+                    "valueFontColor": "#ffffff",
+                    "placeValuesInside": "1",
+                    "showHoverEffect": "1",
+                    "rotateValues": "1",
+                    "showXAxisLine": "1",
+                    "xAxisLineThickness": "1",
+                    "xAxisLineColor": "#999999",
+                    "showAlternateHGridColor": "0",
+                    "legendBgAlpha": "0",
+                    "legendBorderAlpha": "0",
+                    "legendShadow": "0",
+                    "legendItemFontSize": "10",
+                    "legendItemFontColor": "#666666"
+                },
+                "categories": [{
+                    "category": [{
+                        "label": "Energy"
+                    }, {
+                        "label": "Infrastructure"
+                    }, {
+                        "label": "Trade Credit & Political Risk"
+                    }, {
+                        "label": "FINPRO"
+                    }, {
+                        "label": "Cargo"
+                    }, {
+                        "label": "Marine Hull"
+                    }]
+                }],
+                "dataset": [{
+                    "seriesname": "Actual",
+                    "data": [{
+                        "value": "11545"
+                    }, {
+                        "value": "19195"
+                    }, {
+                        "value": "11077"
+                    }, {
+                        "value": "12959"
+                    }, {
+                        "value": "9515"
+                    }, {
+                        "value": "9661"
+                    }]
+                }, {
+                    "seriesname": "Budget",
+                    "data": [{
+                        "value": "12845"
+                    }, {
+                        "value": "13395"
+                    }, {
+                        "value": "10977"
+                    }, {
+                        "value": "13659"
+                    }, {
+                        "value": "9515"
+                    }, {
+                        "value": "10961"
+                    }]
+                }, {
+                    "seriesname": "Prior Year",
+                    "data": [{
+                        "value": "14245"
+                    }, {
+                        "value": "11795"
+                    }, {
+                        "value": "11277"
+                    }, {
+                        "value": "12259"
+                    }, {
+                        "value": "9215"
+                    }, {
+                        "value": "9461"
+                    }]
+                }],
+                "trendlines": [{
+                    "line": [{
+                        "startvalue": "8550",
+                        "color": "#0075c2",
+                        "displayvalue": "Previous{br}Average",
+                        "valueOnRight": "1",
+                        "thickness": "1",
+                        "showBelow": "1",
+                        "tooltext": "Previous year target  : $8.5K"
+                    }, {
+                        "startvalue": "11950",
+                        "color": "#1aaf5d",
+                        "displayvalue": "Current{br}Average",
+                        "valueOnRight": "1",
+                        "thickness": "1",
+                        "showBelow": "1",
+                        "tooltext": "Current year target  : $11K"
+                    }]
+                }]
+            }
+        });
+
+        csatGauge.render();
+    });
+</script>
+

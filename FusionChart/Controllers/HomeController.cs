@@ -12,7 +12,37 @@ namespace FusionChart.Controllers
         {
             return View();
         }
-        
+
+        public ActionResult ServiceRevenue()
+        {
+            return View();
+        }
+
+        public ActionResult RevenueByClass()
+        {
+            return View();
+        }
+
+        public ActionResult SpecialtyCSR()
+        {
+            return View();
+        }
+
+        public ActionResult SpecialtySales()
+        {
+            return View();
+        }
+
+        public ActionResult SpecialtyContributions()
+        {
+            return View();
+        }
+
+        public ActionResult RevenueMatric()
+        {
+            return View();
+        }
+
         public ActionResult Gauge()
         {
             return View();
