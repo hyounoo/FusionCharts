@@ -15,11 +15,36 @@ namespace FusionChart.Controllers
 
         public ActionResult ServiceRevenue()
         {
-            return View();
-        }
+            var countryList = new List<string>
+            {
+                "Hong Kong",
+                "Indonesia",
+                "Korea",
+                "Malaysia",
+                "Philippines",
+                "Singapore",
+                "Singapore Energy",
+                "Singapore BMA",
+                "Thailand",
+                "Taiwan",
+                "Vietnam",
+                "Japan",
+                "Greater China",
+                "Asean",
+                "Asia"
+            };
 
-        public ActionResult RevenueByClass()
-        {
+            var reportlist = new List<string>
+            {
+                "Specialty Client Service Revenue",
+                "Revenue by each specialty and class",
+                "CSR Performance",
+                "Specialty Contribution",
+                "RevenueMatric Matric Comparison"
+            };
+
+            ViewBag.CountrySelectList = new SelectList(countryList);
+            ViewBag.ReportSelectList = new SelectList(reportlist);
             return View();
         }
 

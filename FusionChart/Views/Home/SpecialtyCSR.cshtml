@@ -1,39 +1,9 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Specialty Client Service Revenue";
 }
 
 <h2>Specialty Client Service Revenue</h2>
 
-<div>
-    <table>
-        <thead>
-            <tr>
-                <td>
-                    Selection Criteria
-                </td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    Country
-                </td>
-                <td>                    
-                    @Html.DropDownList("Country", ViewBag.CountrySelectList as SelectList)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Report
-                </td>
-                <td>
-                    @Html.DropDownList("Report", ViewBag.ReportSelectList as SelectList)
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 
 <div id="chart-container">An angular gauge will load here!</div>
 

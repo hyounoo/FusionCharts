@@ -969,6 +969,7 @@
     <Content Include="Views\Home\MultiSeries.cshtml" />
     <Content Include="Views\Home\Pareto.cshtml" />
     <Content Include="Views\Home\ServiceRevenue.cshtml" />
+    <Content Include="Views\Home\SpecialtyCSR.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
