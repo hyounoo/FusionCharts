@@ -5,6 +5,45 @@
 
 <h2>SpecialtyContributions</h2>
 
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    Selection Criteria
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Country
+                </td>
+                <td>
+                    @Html.DropDownList("Country", ViewBag.CountrySelectList as SelectList)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Report
+                </td>
+                <td>
+                    @Html.DropDownList("Report", ViewBag.ReportSelectList as SelectList)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Period
+                </td>
+                <td>
+                    @Html.DropDownList("Month", ViewBag.MonthSelectList as SelectList)
+                    @Html.DropDownList("Year", ViewBag.YearSelectList as SelectList)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 <div id="pie-container">FusionCharts XT will load here!</div>
 
 <script type="text/javascript" src="~/Scripts/fusioncharts/fusioncharts.js"></script>
