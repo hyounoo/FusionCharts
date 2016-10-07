@@ -13,9 +13,39 @@ namespace FusionChart.Controllers
             return View();
         }
 
-        public ActionResult ServiceRevenue()
+        SelectList GetMonthList()
         {
-            var countryList = new List<string>
+            var list = new List<string>
+            {
+                "Jan",
+                "Feb",
+                "Mar",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            };
+            return new SelectList(list);
+        }
+
+        SelectList GetYearList()
+        {
+            var list = new List<string>
+            {
+               "2016",
+                "2015"
+            };
+            return new SelectList(list);
+        }
+
+        SelectList GetCountryList()
+        {
+            var list = new List<string>
             {
                 "Hong Kong",
                 "Indonesia",
@@ -33,8 +63,12 @@ namespace FusionChart.Controllers
                 "Asean",
                 "Asia"
             };
+            return new SelectList(list);
+        }
 
-            var reportlist = new List<string>
+        SelectList GetReportList()
+        {
+            var list = new List<string>
             {
                 "Specialty Client Service Revenue",
                 "Revenue by each specialty and class",
@@ -42,9 +76,16 @@ namespace FusionChart.Controllers
                 "Specialty Contribution",
                 "RevenueMatric Matric Comparison"
             };
+            return new SelectList(list);
+        }
 
-            ViewBag.CountrySelectList = new SelectList(countryList);
-            ViewBag.ReportSelectList = new SelectList(reportlist);
+        public ActionResult ServiceRevenue()
+        {
+            ViewBag.CountrySelectList = GetCountryList();
+            ViewBag.ReportSelectList = GetReportList();
+
+            ViewBag.MonthSelectList = GetMonthList();
+            ViewBag.YearSelectList = GetYearList();
             return View();
         }
 
