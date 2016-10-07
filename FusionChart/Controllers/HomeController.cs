@@ -91,6 +91,11 @@ namespace FusionChart.Controllers
 
         public ActionResult SpecialtyCSR()
         {
+            ViewBag.CountrySelectList = GetCountryList();
+            ViewBag.ReportSelectList = GetReportList();
+
+            ViewBag.MonthSelectList = GetMonthList();
+            ViewBag.YearSelectList = GetYearList();
             return View();
         }
 
@@ -101,6 +106,11 @@ namespace FusionChart.Controllers
 
         public ActionResult SpecialtyContributions()
         {
+            ViewBag.CountrySelectList = GetCountryList();
+            ViewBag.ReportSelectList = GetReportList();
+
+            ViewBag.MonthSelectList = GetMonthList();
+            ViewBag.YearSelectList = GetYearList();
             return View();
         }
 

@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "SpecialtyContributions";
+}
+
+<h2>SpecialtyContributions</h2>
+
+<div id="pie-container">FusionCharts XT will load here!</div>
+
+<script type="text/javascript" src="~/Scripts/fusioncharts/fusioncharts.js"></script>
+<script type="text/javascript" src="~/Scripts/fusioncharts/themes/fusioncharts.theme.fint.js"></script>
+
+<script type="text/javascript">
+    FusionCharts.ready(function () {
+        var pie = new FusionCharts({
+            type: 'pie3d',
+            renderAt: 'pie-container',
+            width: '650',
+            height: '400',
+            dataFormat: 'json',
+            dataSource: {
+                "chart": {
+                    "caption": "Specialty lines account fo r 52% of YTD Jun CSR",
+                    "numberSurfix": "%",
+                    "showPercentInTooltip": "0",
+                    "decimals": "1",
+                    "useDataPlotColorForLabels": "1",
+                    //Theme
+                    "theme": "fint"
+                },
+                "data": [{
+                    "label": "Energy",
+                    "value": "6"
+                }, {
+                    "label": "Infrastructure",
+                    "value": "10"
+                }, {
+                    "label": "TCPR",
+                    "value": "6"
+                }, {
+                    "label": "FINPRO",
+                    "value": "7"
+                }, {
+                    "label": "Cargo",
+                    "value": "5"
+                }, {
+                    "label": "Hull",
+                    "value": "5"
+                }, {
+                    "label": "EH&B",
+                    "value": "13"
+                }, {
+                    "label": "Non-Specialty",
+                    "value": "48"
+                }]
+            }
+        });
+
+        pie.render();
+    });
+</script>
