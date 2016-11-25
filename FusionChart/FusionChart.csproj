@@ -129,6 +129,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\favicon.ico" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -971,6 +972,7 @@
     <Content Include="Views\Home\ServiceRevenue.cshtml" />
     <Content Include="Views\Home\SpecialtyCSR.cshtml" />
     <Content Include="Views\Home\SpecialtyContributions.cshtml" />
+    <Content Include="Views\Home\AngularTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

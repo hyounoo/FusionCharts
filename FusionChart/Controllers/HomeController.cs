@@ -13,6 +13,11 @@ namespace FusionChart.Controllers
             return View();
         }
 
+        public ActionResult AngularTest()
+        {
+            return View();
+        }
+
         SelectList GetMonthList()
         {
             var list = new List<string>
